@@ -1,0 +1,85 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Full background image */
+    background-size: cover; /* Cover the entire background */
+}
+
+/* Form container styles */
+#dbcreate {
+    background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    padding: 20px;
+    margin: 50px auto; /* Center the form */
+    max-width: 500px; /* Limit the width of the form */
+}
+
+/* Form heading styles */
+#dbcreate h2 {
+    text-align: center; /* Centered heading */
+    color: #444; /* Darker text color for contrast */
+}
+
+/* Input styles */
+#dbcreate input[type="text"],
+#dbcreate input[type="email"],
+#dbcreate input[type="date"],
+#dbcreate select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding */
+    margin: 10px 0; /* Margin between inputs */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+/* Focus effect on inputs */
+#dbcreate input:focus,
+#dbcreate select:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Label styles */
+label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Margin for spacing */
+    font-weight: bold; /* Bold font for labels */
+}
+
+/* Button styles */
+#dbcreate button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Inner padding */
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Larger font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+#dbcreate button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #dbcreate {
+        margin: 20px; /* Smaller margin on mobile */
+    }
+
+    #dbcreate h2 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+
+    #dbcreate button {
+        font-size: 1rem; /* Smaller button text on mobile */
+    }
+}
+

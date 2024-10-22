@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <main>
+        <section class="intro">
+            <h1 id="h">Let's learn </h1>
+            <h1 id="h2"> Constitution with fun</h1>
+            <p>Welcome! Discover and master the Indian Constitution with detailed resources and interactive quizzes. Dive in and learn effectively!</p>
+            <button class="about-btn">About us</button>
+        </section>
+
+        <!-- Image Section -->
+        <section class="images">
+            <div class="image-wrapper">
+                <img src="images/national-flag-1.png" alt="Indian Flag">
+            </div>
+            <div class="image-wrapper">
+                <img src="images/fundamental duties image.jpeg" alt="Constitution Image">
+            </div>
+            <div class="image-wrapper ">
+                <img src="images/landing page img 3.jpeg" alt="Small Image">
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search">
+            <a href="/learnhome"><button class="start-btn"  >start</button></a><br>
+            <button class="search-btn" >Search constitutional Article</button>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2>Take your </h2>
+            <h2>experience to the next level</h2>
+        </section>
+
+        <!-- Languages Section -->
+        <div class="languages">
+            <div class="languages-list">
+                <h2>languages</h2>
+                <p>The 22 languages in the Eighth <br> Schedule of the Indian Constitution are:</p>
+                <ul>
+                    <li>Assamese</li>
+                    <li>Bengali</li>
+                    <li>Bodo</li>
+                    <li>Dogri</li>
+                    <li>Gujarati</li>
+                    <li>Hindi</li>
+                    <li>Kannada</li>
+                    <li>Kashmiri</li>
+                    <li>Konkani</li>
+                    <li>Malayalam</li>
+                    <li>Manipuri</li>
+                    <li>Marathi</li>
+                    <li>Maithili</li>
+                    <li>Nepali</li>
+                    <li>Oriya</li>
+                    <li>Punjabi</li>
+                    <li>Sanskrit</li>
+                    <li>Santhali</li>
+                    <li>Sindhi</li>
+                    <li>Tamil</li>
+                    <li>Telugu</li>
+                    <li>Urdu</li>
+                </ul>
+            </div>
+            <div class="map">
+                <img src="images/indian map for landing page.jpeg" alt="Map of India">
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features">
+          <img src="images/brain-image-1.png " alt="">
+            <div class="feature">
+                <h3>Free. Fun. Effective.</h3>
+                <p>Learning with us is fun, and research  <br> shows that it works! With quick, bite-sized lessons, you’ll earn points and unlock new levels while gaining knowledge.</p>
+              
+            </div>
+            
+             
+            <div class="feature">
+                <h3>Stay Motivated</h3>
+                <p>We make it easy to form a habit of learning the constitution with game-like features, fun challenges, and more.</p>
+                
+            </div>
+          <img src="images/brain-image-2.png "  alt="Motivated Brain">  
+          <img src="images/brain-image-3.png" alt="Mission Brain">
+            <div class="feature">
+                <h3>Our Mission</h3>
+                <p>We’re here to develop the best education in the world and make it universally available. Our team works to make learning the constitution fun, free, and effective for everyone.</p>
+               
+            </div>
+            
+
+            <div class="feature">
+                <h3>Our Culture</h3>
+                <p>Working at Civic Savvy is like learning on the go; we make daily progress while having fun, celebrating wins together. We take time to unwind and enjoy new things. We’re learners first.</p>
+               
+            </div>
+           <img src="images/brain-image-4.png" alt="Fun Brain">
+        </section>
+
+        <!-- Last Page -->
+         
+    </main>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+// Animate the letters
+const text = document.getElementById("h");
+text.innerHTML = text.textContent.split("").map(letter => `<span>${letter}</span>`).join("");
+text.style.color="#11539a";
+const text2 = document.getElementById("h2");
+text2.innerHTML = text2.textContent.split("").map(letter => `<span>${letter}</span>`).join("");
+text2.style.color="#11539a";
+
+
+gsap.fromTo("h1 span,h2 span", 
+  { 
+    opacity: 0, 
+    y: 50 
+  }, 
+  { 
+    opacity: 1, 
+    y: 0, 
+    duration: 0.1, 
+    repeat: -1, 
+    yoyo: true,     
+    repeatDelay: 1, 
+    stagger: 0.1,   
+    color: "#11539a",
+  }
+);
+gsap.from(".images .image-wrapper",{
+    x:400,
+    stagger:0.5,
+    opacity:0
+})
+gsap.from(".languages-list",{
+    x:-100,
+    opacity:0,
+    duration:0.5,
+    scrollTrigger:{
+       scroller:"body",
+       trigger:".languages",
+    
+       start:"top 60%"
+    },
+    
+})
+gsap.from(".map",{
+    x:100,
+    opacity:0,
+    duration:0.5,
+    scrollTrigger:{
+       scroller:"body",
+       trigger:".languages",
+      
+       start:"top 60%"
+    },
+})
+gsap.from(".experience",{
+    x:-200,
+    opacity:0,
+    duration:1,
+
+    scrollTrigger:{
+        scroller:"body",
+        trigger:".search",
+     
+        start:"top 60%"
+    }
+})
+gsap.from(".feature",{
+    x:100,
+    opacity: 0,   // Initially hidden
+      duration: 1,  // Duration of animation
+      ease: "power2.out",  // Ease-out effect
+      stagger: 0.2,       // Adds a delay between each item's animation
+      delay: 0.1 ,
+      scrollTrigger:{
+        scroller:"body",
+        trigger:".features",
+        start:"top 80%",
+       scrub:0.5,
+       end:"top -100%",
+     
+
+      }
+})
+gsap.from(".features img",{
+    x:-100,
+    opacity: 0,  
+      duration: 1, 
+      ease: "power2.out",  
+      stagger: 0.5,      
+      delay: 0.5,
+      scrollTrigger:{
+        scroller:"body",
+        trigger:".features",
+        start:"top 80%",
+       scrub:0.5,
+       end:"top -100%",
+       
+    }
+})
+
+</script>
+
+  </script>
+</body>
+</html>
+</body>
+</html>

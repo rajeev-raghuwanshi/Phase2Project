@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/learnhome.css" />
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <div class="container">
+      <div class="part part1">
+        <div class="left">
+          <h1 style="font-size: 45px;">Part-I <br />The Union and its Territory</h1>
+          <div class="options">
+            <a href="/theory/1" method="GET"><h3>Theory</h3></a>
+            <h3>Practice Now</h3>
+            <a href="/partquiz/1" method="GET "><h3>Quiz</h3></a>
+            <h3>Progress</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/part1.png " alt="" style="object-fit: cover" />
+          <p>
+            This part of the constitution deals with the formation, renaming,
+            merging, and alteration of the boundaries or names of the states and
+            union territories.
+          </p>
+        </div>
+      </div>
+      <div class="part part2">
+        <div class="left">
+          <h1>Part-II <br />CitizenShip</h1>
+          <div class="options">
+            <a href="/theory/2" method="GET"><h3>Theory</h3></a>
+            <h3>Practice Now</h3>
+           <a href="/partquiz/2" method="GET "><h3>Quiz</h3></a>
+            <h3>Progress</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/part2.png " alt="" />
+          <p>
+            This part provides for the acquisition and termination of Indian
+            citizenship. It also lays down the criteria for the eligibility and
+            disqualification of citizens.
+          </p>
+        </div>
+      </div>
+      <div class="part part3">
+        <div class="left">
+          <h1>Part-III <br />Fundamental Rights</h1>
+          <div class="options">
+            <a href="/theory/3" method="GET"><h3>Theory</h3></a>
+            <h3>Practice Now</h3>
+            <a href="/partquiz/3" method="GET "><h3>Quiz</h3></a>
+            <h3>Progress</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/part3.png " alt="" />
+          <p>
+            Fundamental Rights are the basic human rights guaranteed by the
+            constitution to all individuals. These rights are considered
+            essential for the overall development of individuals.
+          </p>
+        </div>
+      </div>
+      <div class="part part4">
+        <div class="left">
+          <h1>Part-IV <br />Directive principles of state policy</h1>
+          <div class="options">
+            <a href="/theory/4" method="GET"><h3>Theory</h3></a>
+            <h3>Practice Now</h3>
+            <a href="/partquiz/4" method="GET "><h3>Quiz</h3></a>
+            <h3>Progress</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/part4.png " alt="" style="object-fit: cover" />
+          <p>
+            The Directive Principles are guidelines for the framing of laws by
+            the government. These principles aim to create a social order
+            characterized by social, economic, and political justice.
+          </p>
+        </div>
+      </div>
+      <div class="part part4A">
+        <div class="left">
+          <h1>Part-IV(A) <br />Fundamental Duties</h1>  
+          <div class="options">
+            <a href="/theory/10" method="GET"><h3>Theory</h3></a>
+            <h3>Practice Now</h3>
+            <a href="/partquiz/4" method="GET "><h3>Quiz</h3></a>
+            <h3>Progress</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/part4A.png " alt="" style="object-fit: cover" />
+          <p>
+            The Directive Principles are guidelines for the framing of laws by
+            the government. These principles aim to create a social order
+            characterized by social, economic, and political justice.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      gsap.from(".part1 .left", {
+        x: -100,
+        duration: 1,
+        opacity: 0,
+      });
+      gsap.from(".part1 .right", {
+        x: 100,
+        duration: 1.2,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part1",
+          scroller: "body",
+        },
+      });
+      gsap.from(".part2 .left", {
+        x: -100,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part2",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+      gsap.from(".part2 .right", {
+        x: 100,
+        duration: 1.2,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part2",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+      gsap.from(".part3 .left", {
+        x: -100,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part3",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+      gsap.from(".part3 .right", {
+        x: 100,
+        duration: 1.2,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part3",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+      gsap.from(".part4 .left", {
+        x: -100,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part4",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+      gsap.from(".part4 .right", {
+        x: 100,
+        duration: 1.2,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part4",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+      gsap.from(".part4A .left", {
+        x: -100,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part4A",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+      gsap.from(".part4A .right", {
+        x: 100,
+        duration: 1.2,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".part4A",
+          scroller: "body",
+          start: "top 30%",
+        },
+      });
+    </script>
+  </body>
+</html>

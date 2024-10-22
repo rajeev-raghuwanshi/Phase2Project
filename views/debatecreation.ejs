@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/debatecr.css">
+</head>
+<body style="  background: url('/images/debatecrbg.jpg') no-repeat center center fixed; background-size: cover;">
+    <form action="/debatecreate" id="dbcreate" method="POST">
+        <h2>Create a Debate</h2> <!-- Added a heading for the form -->
+        <label for="topic">Topic:</label>
+        <input type="text" name="topic" placeholder="Enter topic of debate" required>
+
+        <label for="hostname">Host Name:</label>
+        <input type="text" name="hostname" placeholder="Enter Hostname" required>
+
+        <label for="hostemail">Host Email:</label>
+        <input type="email" name="hostemail" placeholder="Enter Hostemail" required>
+
+        <label for="meetlink">Meeting Link:</label>
+        <input type="text"  name="meetlink" placeholder="Provide Link to meeting" required>
+
+        <label for="platform">Platform:</label>
+        <input type="text" name="platform" placeholder="Meeting Platform Name" required>
+
+        <label for="mode">Mode of Debate:</label>
+        <select name="mode" id="md" required>
+            <option value="" disabled selected>Select Mode</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+        </select>
+
+        <label for="dateofdebate">Date of Debate:</label>
+        <input type="date" name="dateofdebate" required>
+
+        <button type="submit">Schedule Debate</button> <!-- Added a button for submission -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Part Theory</title>
+    <link rel="stylesheet" href="/css/parttheory.css">
+  </head>
+  <body>
+    <div class="head">
+      <div class="custom-shape">
+        <h2><%= title.part_number %> - <%= title.part_title %></h2>
+      </div>
+      <div class="image">
+        <img src="/images/theorypage.png" alt="">
+      </div>
+    </div>
+
+    <div class="main">
+        <div class="right">
+            <div class="overview">
+                <h2>Overview</h2>
+                    <p><%= title.overview %></p>
+            </div>
+            <div class="articles">
+             <h3 style="font-weight: 600; font-size: 24px;">Articles From Part: <%=id%></h3>
+             <% articles.forEach(a => { %>
+
+                <a href="/articles"><%= a.article_number %> :<%= a.article_text %></a>
+              
+             <% }) %>
+            </div>
+        </div>
+        <div class="left">
+          <div class="quiz-box">
+            <h1>Interactive Quiz</h1>
+            <p>Test your Knowledge on <%= title.part_number %>-<%= title.part_title %> by taking these questions</p>
+            <button>Start Quiz</button>
+          </div>
+          <div class="quiz-image">
+            <img src="/images/quiz.png" alt="">
+          </div>
+
+          
+        </div>
+        
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      var tl=gsap.timeline();
+
+      tl.from(".overview",{
+        opacity:0,
+        duration:0.5,
+        scale:0
+      })
+      tl.from(".articles",{
+        x:-100,
+        opacity:0,
+
+      })
+      tl.from(".left",{
+        x:30,
+     
+        opacity:0
+
+      })
+      gsap.from(".articles a",{
+        y:100,
+        opacity:0,
+        stagger:0.1,
+      })
+
+    </script>
+  </body>
+</html>

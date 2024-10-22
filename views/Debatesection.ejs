@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate Section</title>
+    <link rel="stylesheet" href="/css/debate.css">
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <div class="container" style="background: url(/images/dbbg.jpg); background-position: center; background-size: contain;">
+        <h1>Debate Section</h1>
+         
+        <a href="/debatecreate"><button id="sdb">Schedule Debate</button></a>
+        <h3>Upcoming Debates</h3>
+        <div class="upcoming-debates">
+            <ul>
+                <%  debates.forEach(db => { %>
+                    <li class="dbdetails" style="font-size: 18px;">
+                        <p>Host: <%= db.host_name %></p><br>
+                        <p>Date: <%= db.debate_date %></p><br>
+                        <p>Topic: <%= db.debate_topic %></p><br>
+                        <p>Meeting Link:<p style="color: rgb(25, 46, 240);"><%= db.meeting_link %></p></p><br>
+                        <p>Platform:</p> <%= db.platform %><br>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="participated-debates">
+            <!-- You can add code here to display participated debates if needed -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body style="background: url(/images/loginbg.jpeg); background-position: center; background-repeat: no-repeat; background-size: contain;">
+    <%- include("partials/header.ejs") %>
+    <div class="container">
+        <!-- Left Section (Login Form) -->
+        <div class="login-form">
+            <h2>Welcome to</h2>
+            <p>Empowering Minds, Shaping Futures:</p>
+            <h3>Your Guide to Understanding the Constitution</h3>
+            
+            <form action="/login" method="post">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your mail address" required>
+                
+                <label for="password">Password <span class="required">*</span></label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Forgot your Password?</a>
+                </div>
+                
+                <button type="submit" class="login-btn" style="color: white;font-size: large;display: flex;justify-content: center;align-items: center;">Log in</button>
+
+                
+                <p>Or,Login with</p>
+                
+                <button class="google-login">
+                    <a href="/auth/google/login" method="POST" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="/images/googlelogo.jpg" alt="Google Logo"> Sign up with Google
+                    </a>
+                </button>
+                
+                <p>Don’t have an account? <a href="/register">Register here</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
